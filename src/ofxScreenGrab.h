@@ -17,7 +17,7 @@ public:
     void grabScreen(int x, int y);
     void grabScreen() {grabScreen(0, 0);}
     void draw(int x, int y);
-    ofTexture* getTexture() {return &tex;}
+    ofTexture& getTextureReference() {return tex;}
 
 private:
     int width, height;

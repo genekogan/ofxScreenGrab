@@ -12,12 +12,12 @@ void ofApp::update(){
     grabber.grabScreen(0, 0);
 }
 
-//--------------------------------------------------------------
+//------------------------------------------------- -------------
 void ofApp::draw(){
     grabber.draw(0, 0);
     
     /* or you can get the texture directly */
-    ofTexture* tex = grabber.getTexture();
+    ofTexture tex = grabber.getTextureReference();
 }
 
 //--------------------------------------------------------------
