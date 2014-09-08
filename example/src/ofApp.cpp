@@ -2,8 +2,11 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    /* if using macbook retina, set to true */
+    bool retina = true;
+
     /* setup a grab window, same size as the app */
-    grabber.setup(ofGetWidth(), ofGetHeight());
+    grabber.setup(ofGetWidth(), ofGetHeight(), retina);
 }
 
 //--------------------------------------------------------------
