@@ -5,48 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>FC2F9E94-4FA7-4B92-B381-963AA9857C01</string>
+	<string>757C4BDD-DF52-433A-93A1-6A1E6AA94EB0</string>
 	<key>IDESourceControlProjectName</key>
 	<string>example</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>63FBE71D-3930-4B28-AFEE-998F4C5AEF52</key>
-		<string>https://github.com/genekogan/openFrameworks.git</string>
-		<key>913C96CB-6EF8-4E34-88A4-0D568A676B5B</key>
+		<key>518FB09BD2F7E4DED99A71BC7A8D171298C064BA</key>
 		<string>https://github.com/genekogan/ofxScreenGrab.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>addons/ofxScreenGrab/example/example.xcodeproj/project.xcworkspace</string>
+	<string>example/example.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>63FBE71D-3930-4B28-AFEE-998F4C5AEF52</key>
-		<string>../../../../..</string>
-		<key>913C96CB-6EF8-4E34-88A4-0D568A676B5B</key>
+		<key>518FB09BD2F7E4DED99A71BC7A8D171298C064BA</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/genekogan/openFrameworks.git</string>
+	<string>https://github.com/genekogan/ofxScreenGrab.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>63FBE71D-3930-4B28-AFEE-998F4C5AEF52</string>
+	<string>518FB09BD2F7E4DED99A71BC7A8D171298C064BA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>913C96CB-6EF8-4E34-88A4-0D568A676B5B</string>
+			<string>518FB09BD2F7E4DED99A71BC7A8D171298C064BA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ofxScreenGrab</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>63FBE71D-3930-4B28-AFEE-998F4C5AEF52</string>
-			<key>IDESourceControlWCCName</key>
-			<string>openFrameworks</string>
 		</dict>
 	</array>
 </dict>
