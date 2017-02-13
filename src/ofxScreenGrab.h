@@ -19,8 +19,9 @@ public:
     void draw(int x, int y, int w, int h);
     void draw(int x, int y) {draw(x, y, width, height);}
     ofTexture& getTextureReference() {return tex;}
-
-private:
+    int getWidth() {return width * rx;}
+    int getHeight() {return height * rx;}
+protected:
     int width, height;
     ofTexture tex;
     int rx;
