@@ -54,7 +54,7 @@ public:
     }
     
     void mouseMoved(int x, int y){
-        if (!debug || draggingTl || draggingBr) return;
+        if (!debug || draggingTl || draggingBr || dragging) return;
         highlightingTl = false;
         highlightingBr = false;
         float dtl = ofDist(x, y, tl.x, tl.y);
@@ -68,10 +68,16 @@ public:
     
     void mouseDragged(int x, int y){
         if (!debug) return;
-        if (draggingTl) {
-            tl.set(x, y);
+        if (dragging) {
+            float dx = x-anchor.x;
+            float dy = y-anchor.y;
+            tl.set(ofClamp(tl.x + dx, 0, width), ofClamp(tl.y + dy, 0, height));
+            br.set(ofClamp(br.x + dx, 0, width), ofClamp(br.y + dy, 0, height));
+            anchor.set(x, y);
+        } else if (draggingTl) {
+            tl.set(ofClamp(x, 0, width), ofClamp(y, 0, height));
         } else if (draggingBr) {
-            br.set(x, y);
+            br.set(ofClamp(x, 0, width), ofClamp(y, 0, height));
         }
     }
     
@@ -81,6 +87,9 @@ public:
             draggingTl = true;
         } else if (highlightingBr) {
             draggingBr = true;
+        } else if (x > tl.x && x < br.x && y > tl.y && y < br.y) {
+            dragging = true;
+            anchor.set(x, y);
         }
     }
     
@@ -88,6 +97,7 @@ public:
         if (!debug) return;
         draggingTl = false;
         draggingBr = false;
+        dragging = false;
     }
     
     void setDebug(bool debug) {
@@ -106,14 +116,15 @@ public:
 
 private:
     
-    bool debug;
-    ofPoint tl, br;
-    bool highlightingTl, highlightingBr;
-    bool draggingTl, draggingBr;
     ofxScreenGrab grabber;
+    ofPixels pixels;
+    ofImage cropped;
+    ofPoint tl, br, anchor;
+    bool highlightingTl, highlightingBr;
+    bool draggingTl, draggingBr, dragging;
     int width, height;
     bool retina;
     float mouseRadius;
-    ofPixels pixels;
-    ofImage cropped;
+    bool debug;
+
 };
