@@ -8,8 +8,16 @@
 #pragma once
 
 #include "ofMain.h"
+#ifndef _WIN32
 #include "macGlutfix.h"
-
+#else
+#include <iostream>
+#include <ole2.h>
+#include <olectl.h>
+#include "ofMain.h"
+#include <time.h>
+#include <omp.h>
+#endif
 class ofxScreenGrab
 {
 public:
@@ -21,6 +29,18 @@ public:
     ofTexture& getTextureReference() {return tex;}
     int getWidth() {return width * rx;}
     int getHeight() {return height * rx;}
+
+#ifdef _WIN32
+	unsigned char * pixelsBelowWindow( int x, int y, int w, int h );
+	RGBQUAD *screenPixels;
+	int screen_x, screen_y;
+	HBITMAP screen_bitmap;
+	HDC compatible_screen_context;
+	HDC screen_context;
+	BITMAPINFOHEADER info;
+	unsigned char * pPixels;
+
+#endif
 protected:
     int width, height;
     ofTexture tex;
